@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="
+        http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+	<!-- bean definitions here Constructor Injection -->
+	
+	<bean id="qID" class="com.model.JavaQue"> 
+	    <constructor-arg value="1"></constructor-arg> 
+	    <constructor-arg value="java"></constructor-arg>
+		<constructor-arg value="What are constructors in Java????"></constructor-arg> 
+		<constructor-arg> 
+		  <list>
+				<value> A constructor initializes objects whenn they are created </value>
+				<value> It has the same name as the class </value>
+				<value> It does not have a return type </value>
+				<value> Can be default or parameterized </value>
+			</list>
+		</constructor-arg> 
+	</bean> 
+		
+	<!-- ========================================================================== -->
+
+	<!-- bean definitions here Setter Injection -->
+
+<!--  	<bean id="qID" class="com.model.JavaQue">
+		<property name="qid" value="1"></property>
+		<property name="qsubject" value="Java"></property>
+		<property name="qname" value="What are constructors in Java???"></property>
+		<property name="answer">
+			<list>
+				<value> A constructor initializes objects when they are created </value>
+				<value> It has the same name as the class </value>
+				<value> It does not have a return type </value>
+				<value> Can be default or parameterized </value>
+			</list>
+		</property>	
+	</bean>
+-->	
+</beans>
