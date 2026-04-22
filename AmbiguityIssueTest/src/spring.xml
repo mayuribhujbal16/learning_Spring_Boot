@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="
+        http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+	<!-- bean definitions here Constructor Injection -->
+	
+	<!-- 
+	<bean id="p1" class="com.model.Person"> 
+	    <constructor-arg value="Mayuriii"></constructor-arg> 
+		<constructor-arg value="16"></constructor-arg> 
+	</bean> 
+	-->
+
+
+	<!-- Ambiguity issue solve::using type Attribute :: using this we can execute constructor of String -->
+	<!-- 
+	<bean id="p1" class="com.model.Person"> 
+	  <constructor-arg value="Mayuriii" type="java.lang.String" /> 
+	  <constructor-arg value="16" type="int" /> 
+	</bean> 
+	-->
+
+	<!-- Ambiguity issue solve::using INDEX Attribute :: using this we can execute constructor of String -->
+	<!-- 
+	<bean id="p1" class="com.model.Person"> 
+	   <constructor-arg value="Mayuriii" index="0" /> 
+	   <constructor-arg value="16" index="1" /> </bean> -->
+
+
+<!-- Ambiguity issue solve::using INDEX Attribute :: using this we can execute 
+		constructor of String -->
+		
+    <bean id="p1" class="com.model.Person">
+		<constructor-arg name="city" value="Pune" />
+		<constructor-arg name="country" value="India" />
+	</bean>
+
+</beans>
